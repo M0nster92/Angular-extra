@@ -1,0 +1,17 @@
+<p>Form Array</p>
+
+<form>
+  <input
+    type="text"
+    class="form-control"
+    (keyup.enter)="addTopic(topic)"
+    #topic
+  />
+</form>
+<button class="btn btn-primary" (click)="value()">Submit</button>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let topic of Topics.controls">
+    {{ topic.value }}
+    <button class="btn btn-danger" (click)="removeTopic(topic)">Remove</button>
+  </li>
+</ul>

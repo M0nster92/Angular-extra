@@ -1,0 +1,41 @@
+<p>dynamic-form works!</p>
+
+<div class="container">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <div *ngFor="let form_elem of form_template">
+        <div [ngSwitch]="form_elem.type">
+          <div *ngSwitchCase="'textBox'">
+            <label>{{ form_elem.label }}:</label>
+            <input
+              type="text"
+              formControlName="{{ form_elem.label }}"
+              placeholder="{{ form_elem.label }}"
+              class="form-control"
+            />
+          </div>
+          <div *ngSwitchCase="'number'">
+            <label>{{ form_elem.label }}:</label>
+            <input
+              type="number"
+              formControlName="{{ form_elem.label }}"
+              placeholder="{{ form_elem.label }}"
+              class="form-control"
+            />
+          </div>
+          <div *ngSwitchCase="'select'">
+            <label>{{ form_elem.label }}:</label>
+            <select class="form-select" formControlName="{{ form_elem.label }}">
+              <option></option>
+              <option *ngFor="let opt of form_elem.options">
+                {{ opt }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <input type="submit" value="save" class="btn btn-primary" />
+    </div>
+  </form>
+</div>
