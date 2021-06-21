@@ -16,6 +16,7 @@ import { ReactFormComponent } from './react-form/react-form/react-form.component
 import { FormArrayComponent } from './react-form/form-array/form-array.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { CustomObjectFormComponent } from './custom-object-form/custom-object-form.component';
+import { NgClassComponent } from './directive/ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CustomObjectFormComponent } from './custom-object-form/custom-object-fo
     FormArrayComponent,
     DynamicFormComponent,
     CustomObjectFormComponent,
+    NgClassComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

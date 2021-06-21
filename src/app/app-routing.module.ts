@@ -12,6 +12,7 @@ import { ServiceFormComponent } from './form/service-form/service-form.component
 import { FormArrayComponent } from './react-form/form-array/form-array.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { CustomObjectFormComponent } from './custom-object-form/custom-object-form.component';
+import { NgClassComponent } from './directive/ng-class/ng-class.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'custom-form',
     component: CustomObjectFormComponent,
+  },
+  {
+    path: 'ngclass',
+    component: NgClassComponent,
   },
 ];
 
